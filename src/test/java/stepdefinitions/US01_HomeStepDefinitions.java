@@ -15,4 +15,20 @@ public class US01_HomeStepDefinitions {
     public void kullaniciAnasayfaninAcildiginiDogrular() {
         assert Driver.getDriver().getTitle().contains("BD SHOP | Online Shopping BD | YouTube Gadget & Gear Shop");
     }
+
+    @And("kullanici loginHome butona tiklar")
+    public void kullaniciLoginHomeButonaTiklar() {
+    }
+
+    @And("kullanici loginLogin butona tiklar")
+    public void kullaniciLoginLoginButonaTiklar() {
+    }
+
+    @And("kullanici email ve password alanlarinda This is a required field uyarisini goruntuler")
+    public void kullaniciEmailVePasswordAlanlarindaThisIsARequiredFieldUyarisiniGoruntuler() {
+    }
+
+    @And("kullanici sayfayi kapatir")
+    public void kullaniciSayfayiKapatir() {
+    }
 }
