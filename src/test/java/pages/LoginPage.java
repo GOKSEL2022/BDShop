@@ -5,12 +5,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilies.Driver;
 
+public class LoginPage {
 
-public class HomePage {
-    public HomePage() {
+    public LoginPage(){
         PageFactory.initElements(Driver.getDriver(),this);
-
     }
-    @FindBy(className = "authorization-link")
-    public WebElement loginButonHome;
+    @FindBy(id = "send2")
+    public WebElement loginButonLogin;
 }
