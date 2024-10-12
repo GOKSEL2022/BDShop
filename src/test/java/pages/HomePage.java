@@ -11,6 +11,6 @@ public class HomePage {
         PageFactory.initElements(Driver.getDriver(),this);
 
     }
-    @FindBy(className = "authorization-link")
+    @FindBy(xpath = "//*[@href='#social-login-popup']")
     public WebElement loginButonHome;
 }
