@@ -6,4 +6,4 @@ Feature: sayfaya kayit tesi
     And   kullanici loginHome butona tiklar
     And   kullanici loginLogin butona tiklar
     And   kullanici email ve password alanlarinda This is a required field uyarisini goruntuler
-    And   kullanici sayfayi kapatir
+   # And   kullanici sayfayi kapatir
