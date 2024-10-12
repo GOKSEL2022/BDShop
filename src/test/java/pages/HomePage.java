@@ -9,8 +9,7 @@ import utilies.Driver;
 public class HomePage {
     public HomePage() {
         PageFactory.initElements(Driver.getDriver(),this);
-
     }
-    @FindBy(xpath = "//*[@href='#social-login-popup']")
+    @FindBy(xpath = "//a[normalize-space()='Log In']")
     public WebElement loginButonHome;
 }
