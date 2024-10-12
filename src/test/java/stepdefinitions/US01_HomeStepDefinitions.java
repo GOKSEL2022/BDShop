@@ -29,9 +29,11 @@ public class US01_HomeStepDefinitions {
     }
     @And("kullanici email ve password alanlarinda This is a required field uyarisini goruntuler")
     public void kullaniciEmailVePasswordAlanlarindaThisIsARequiredFieldUyarisiniGoruntuler() {
+        assert pages.loginPage().errorMessageThisIsARequiredFiel1dLogin.isDisplayed();
+        assert pages.loginPage().errorMessageThisIsARequiredFiel2dLogin.isDisplayed();
     }
-
     @And("kullanici sayfayi kapatir")
     public void kullaniciSayfayiKapatir() {
+        Driver.closeDriver();
     }
 }
