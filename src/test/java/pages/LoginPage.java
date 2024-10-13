@@ -9,8 +9,10 @@ public class LoginPage {
     public LoginPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    @FindBy(xpath = "//*[.='Login']")
+    @FindBy(xpath = "(//*[.='Log In'])[4]")
     public WebElement loginButonLogin;
+
+    ////*[@type='submit'])[2]
 
     @FindBy(xpath = "(//*[.='This is a required field.'])[1]")
     public WebElement errorMessageThisIsARequiredFiel1dLogin;
