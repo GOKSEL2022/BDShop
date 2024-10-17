@@ -9,3 +9,9 @@ Feature: sayfaya kayit tesi
     And   kullanici loginLogin butona tiklar
     And   kullanici email ve password alanlarinda This is a required field uyarisini goruntuler
     And   kullanici sayfayi kapatir
+
+  Scenario: ad ve soyad alanlari oncesi bosluk birakma testi
+    And   kullanici loginHome butona tiklar
+    And   kullanici eposta alanina bosluk birakarak valid deger girer
+    And   kullanici sifre alanina bosluk birakarak valid deger girer
+    And   kullanici loginLogin butona tiklar
