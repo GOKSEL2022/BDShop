@@ -34,4 +34,12 @@ public class US01_HomeStepDefinitions {
     public void kullaniciSayfayiKapatir() {
         Driver.closeDriver();
     }
+
+    @And("kullanici eposta alanina bosluk birakarak valid deger girer")
+    public void kullaniciEpostaAlaninaBoslukBirakarakValidDegerGirer() {
+    }
+
+    @And("kullanici sifre alanina bosluk birakarak valid deger girer")
+    public void kullaniciSifreAlaninaBoslukBirakarakValidDegerGirer() {
+    }
 }
