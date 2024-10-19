@@ -1,5 +1,6 @@
 package stepdefinitions;
 import io.cucumber.java.en.*;
+import org.openqa.selenium.Keys;
 import org.testng.asserts.SoftAssert;
 import pages.AllPages;
 import utilies.ConfigReader;
@@ -37,9 +38,10 @@ public class US01_HomeStepDefinitions {
 
     @And("kullanici eposta alanina bosluk birakarak valid deger girer")
     public void kullaniciEpostaAlaninaBoslukBirakarakValidDegerGirer() {
+        pages.loginPage().epostaTextboxLogin.sendKeys(Keys.SPACE,ConfigReader.getProperty("validMail"));
     }
-
     @And("kullanici sifre alanina bosluk birakarak valid deger girer")
     public void kullaniciSifreAlaninaBoslukBirakarakValidDegerGirer() {
+        pages.loginPage().epostaTextboxLogin.sendKeys(Keys.SPACE,ConfigReader.getProperty("validSifre"));
     }
 }
