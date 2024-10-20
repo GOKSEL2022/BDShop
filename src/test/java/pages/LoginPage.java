@@ -20,9 +20,9 @@ public class LoginPage {
     @FindBy(xpath = "(//*[.='This is a required field.'])[2]")
     public WebElement errorMessageThisIsARequiredFiel2dLogin;
 
-    @FindBy(xpath = "//input[@name='login[username]']")
+    @FindBy(xpath = "//*[@id='email-login']")
     public WebElement epostaTextboxLogin;
 
-    @FindBy(xpath = "//input[@name='login[password]']")
+    @FindBy(xpath = "//*[@id='pass-popup']")
     public WebElement sifreTextboxLogin;
 }
