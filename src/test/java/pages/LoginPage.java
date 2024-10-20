@@ -9,7 +9,7 @@ public class LoginPage {
     public LoginPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    @FindBy(xpath = "(//*[.='Log In'])[4]")
+    @FindBy(xpath = "//*[@id='btn-social-login-authentication']")
     public WebElement loginButonLogin;
 
     ////*[@type='submit'])[2]
