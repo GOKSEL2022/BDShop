@@ -46,6 +46,6 @@ public class US01_HomeStepDefinitions {
     }
     @And("kullanici sifre alanina bosluk birakarak valid deger girer")
     public void kullaniciSifreAlaninaBoslukBirakarakValidDegerGirer() {
-        pages.loginPage().epostaTextboxLogin.sendKeys(Keys.SPACE,ConfigReader.getProperty("validSifre"));
+        pages.loginPage().sifreTextboxLogin.sendKeys(Keys.SPACE,ConfigReader.getProperty("validSifre"));
     }
 }
