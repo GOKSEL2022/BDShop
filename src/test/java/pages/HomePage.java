@@ -16,4 +16,7 @@ public class HomePage {
 
     @FindBy(xpath = "//*[@class='mgz-icon mgz-icon-close']")
     public WebElement alertCloseButonHome;
+
+    @FindBy(xpath = "(//div[normalize-space()='Invalid login or password.'])[2]")
+    public WebElement invalidLoginAPasswordAlertHome;
 }

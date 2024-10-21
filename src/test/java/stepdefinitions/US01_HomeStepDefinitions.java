@@ -39,7 +39,6 @@ public class US01_HomeStepDefinitions {
     public void kullaniciSayfayiKapatir() {
         Driver.closeDriver();
     }
-
     @And("kullanici eposta alanina bosluk birakarak valid deger girer")
     public void kullaniciEpostaAlaninaBoslukBirakarakValidDegerGirer() {
         pages.loginPage().epostaTextboxLogin.sendKeys(Keys.SPACE,ConfigReader.getProperty("validMail"));
@@ -47,5 +46,17 @@ public class US01_HomeStepDefinitions {
     @And("kullanici sifre alanina bosluk birakarak valid deger girer")
     public void kullaniciSifreAlaninaBoslukBirakarakValidDegerGirer() {
         pages.loginPage().sifreTextboxLogin.sendKeys(Keys.SPACE,ConfigReader.getProperty("validSifre"));
+    }
+    @And("kullanici eposta alanina ozel karakterle birlikte valid deger girer")
+    public void kullaniciEpostaAlaninaOzelKarakterleBirlikteValidDegerGirer() {
+        pages.loginPage().epostaTextboxLogin.sendKeys("++//**##%!'=?"+ ConfigReader.getProperty("validMail"));
+    }
+    @And("kullanici sifre alanina ozel karakterle birlikte  valid deger girer")
+    public void kullaniciSifreAlaninaOzelKarakterleBirlikteValidDegerGirer() {
+        pages.loginPage().sifreTextboxLogin.sendKeys("++//**##%!'=?"+ConfigReader.getProperty("validSifre"));
+    }
+    @And("kullanici email ve password alanlarinda Invalid login or password uyarisini goruntuler")
+    public void kullaniciEmailVePasswordAlanlarindaInvalidLoginOrPasswordUyarisiniGoruntuler() {
+        assert pages.homePage().invalidLoginAPasswordAlertHome.isDisplayed();
     }
 }

@@ -11,8 +11,20 @@ Feature: sayfaya kayit tesi
     And   kullanici sayfayi kapatir
 
     @TC02
-  Scenario: ad ve soyad alanlari oncesi bosluk birakma testi
+ Scenario: ad ve soyad alanlari oncesi bosluk birakma testi
     And   kullanici loginHome butona tiklar
     And   kullanici eposta alanina bosluk birakarak valid deger girer
     And   kullanici sifre alanina bosluk birakarak valid deger girer
     And   kullanici loginLogin butona tiklar
+    And   kullanici email ve password alanlarinda Invalid login or password uyarisini goruntuler
+    And   kullanici sayfayi kapatir
+
+  @TC03
+  Scenario: ad ve soyad alanlari oncesi ozel karakter testi
+    And   kullanici loginHome butona tiklar
+    And   kullanici eposta alanina ozel karakterle birlikte valid deger girer
+    And   kullanici sifre alanina ozel karakterle birlikte  valid deger girer
+    And   kullanici loginLogin butona tiklar
+    And   kullanici email ve password alanlarinda Invalid login or password uyarisini goruntuler
+    And   kullanici sayfayi kapatir
+
