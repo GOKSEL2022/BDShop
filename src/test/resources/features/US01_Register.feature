@@ -28,3 +28,12 @@ Feature: sayfaya kayit tesi
     And   kullanici email ve password alanlarinda Invalid login or password uyarisini goruntuler
     And   kullanici sayfayi kapatir
 
+  @TC04
+  Scenario: ad ve soyad alanlari oncesi sayilarla test
+    And   kullanici loginHome butona tiklar
+    And   kullanici eposta alanina sayilarla birlikte valid deger girer
+    And   kullanici sifre alanina sayilarla birlikte  valid deger girer
+    And   kullanici loginLogin butona tiklar
+    And   kullanici email ve password alanlarinda Invalid login or password uyarisini goruntuler
+    And   kullanici sayfayi kapatir
+

@@ -59,4 +59,12 @@ public class US01_HomeStepDefinitions {
     public void kullaniciEmailVePasswordAlanlarindaInvalidLoginOrPasswordUyarisiniGoruntuler() {
         assert pages.homePage().invalidLoginAPasswordAlertHome.isDisplayed();
     }
+
+    @And("kullanici eposta alanina sayilarla birlikte valid deger girer")
+    public void kullaniciEpostaAlaninaSayilarlaBirlikteValidDegerGirer() {
+    }
+
+    @And("kullanici sifre alanina sayilarla birlikte  valid deger girer")
+    public void kullaniciSifreAlaninaSayilarlaBirlikteValidDegerGirer() {
+    }
 }
