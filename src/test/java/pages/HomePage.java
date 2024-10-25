@@ -19,4 +19,7 @@ public class HomePage {
 
     @FindBy(xpath = "(//div[normalize-space()='Invalid login or password.'])[2]")
     public WebElement invalidLoginAPasswordAlertHome;
+
+    @FindBy(xpath = "(//*[.='MERHABA,'])[1]")
+    public WebElement kayitliKullaniciMerhabaTextHome;
 }

@@ -46,3 +46,12 @@ Feature: sayfaya kayit tesi
     And   kullanici email ve password alanlarinda This is a required field uyarisini goruntuler
     And   kullanici sayfayi kapatir
 
+  @TC06
+  Scenario: ad ve soyad alanlarina valid degerle sayfaya giris testi
+    And   kullanici loginHome butona tiklar
+    And   kullanici eposta alanina valid deger girer
+    And   kullanici sifre alanina valid deger girer
+    And   kullanici loginLogin butona tiklar
+    And   kullanici hesabiyla sayfaya giris yapildigi dogrulanir
+    And   kullanici sayfayi kapatir
+
