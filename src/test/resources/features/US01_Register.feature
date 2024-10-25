@@ -37,3 +37,12 @@ Feature: sayfaya kayit tesi
     And   kullanici email ve password alanlarinda Invalid login or password uyarisini goruntuler
     And   kullanici sayfayi kapatir
 
+  @TC05
+  Scenario: ad ve soyad alanlarinin bos birakilma sonrasi giris testi
+    And   kullanici loginHome butona tiklar
+    And   kullanici eposta alanina bosluk girer
+    And   kullanici sifre alanina bosluk girer
+    And   kullanici loginLogin butona tiklar
+    And   kullanici email ve password alanlarinda This is a required field uyarisini goruntuler
+    And   kullanici sayfayi kapatir
+
