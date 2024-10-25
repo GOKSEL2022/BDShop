@@ -59,12 +59,20 @@ public class US01_HomeStepDefinitions {
     public void kullaniciEmailVePasswordAlanlarindaInvalidLoginOrPasswordUyarisiniGoruntuler() {
         assert pages.homePage().invalidLoginAPasswordAlertHome.isDisplayed();
     }
-
     @And("kullanici eposta alanina sayilarla birlikte valid deger girer")
     public void kullaniciEpostaAlaninaSayilarlaBirlikteValidDegerGirer() {
+        pages.loginPage().epostaTextboxLogin.sendKeys("123456789"+ ConfigReader.getProperty("validMail"));
     }
-
     @And("kullanici sifre alanina sayilarla birlikte  valid deger girer")
     public void kullaniciSifreAlaninaSayilarlaBirlikteValidDegerGirer() {
+        pages.loginPage().sifreTextboxLogin.sendKeys("123456789"+ConfigReader.getProperty("validSifre"));
+    }
+    @And("kullanici eposta alanina bosluk girer")
+    public void kullaniciEpostaAlaninaBoslukGirer() {
+        pages.loginPage().sifreTextboxLogin.sendKeys(Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE);
+    }
+    @And("kullanici sifre alanina bosluk girer")
+    public void kullaniciSifreAlaninaBoslukGirer() {
+        pages.loginPage().epostaTextboxLogin.sendKeys(Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE);
     }
 }
