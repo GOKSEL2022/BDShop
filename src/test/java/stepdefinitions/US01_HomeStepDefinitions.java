@@ -7,8 +7,7 @@ import utilies.ConfigReader;
 import utilies.Driver;
 import static utilies.ReusableMethods.clickWithJS;
 public class US01_HomeStepDefinitions {
-    AllPages pages=new AllPages();
-    SoftAssert softAssert=new SoftAssert();
+    AllPages pages=new AllPages();    SoftAssert softAssert=new SoftAssert();
     @Given("kullanici url ye gider")
     public void kullaniciUrlYeGider() {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -74,5 +73,17 @@ public class US01_HomeStepDefinitions {
     @And("kullanici sifre alanina bosluk girer")
     public void kullaniciSifreAlaninaBoslukGirer() {
         pages.loginPage().epostaTextboxLogin.sendKeys(Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE,Keys.SPACE);
+    }
+    @And("kullanici eposta alanina valid deger girer")
+    public void kullaniciEpostaAlaninaValidDegerGirer() {
+        pages.loginPage().epostaTextboxLogin.sendKeys(ConfigReader.getProperty("validMail"));
+    }
+    @And("kullanici sifre alanina valid deger girer")
+    public void kullaniciSifreAlaninaValidDegerGirer() {
+        pages.loginPage().sifreTextboxLogin.sendKeys(ConfigReader.getProperty("validSifre"));
+    }
+    @And("kullanici hesabiyla sayfaya giris yapildigi dogrulanir")
+    public void kullaniciHesabiylaSayfayaGirisYapildigiDogrulanir() {
+        assert pages.homePage().kayitliKullaniciMerhabaTextHome.isDisplayed();
     }
 }
