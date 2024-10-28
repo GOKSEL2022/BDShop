@@ -55,3 +55,12 @@ Feature: sayfaya kayit tesi
     And   kullanici hesabiyla sayfaya giris yapildigi dogrulanir
     And   kullanici sayfayi kapatir
 
+  @TC07
+  Scenario: ad ve soyad alanlarina valid degerle sayfaya giris testi
+    And   kullanici loginHome butona tiklar
+    And   kullanici eposta alanina valid deger girer
+    And   kullanici sifre alanina valid deger girer
+    And   kullanici loginLogin butona tiklar
+    And   kullanici hesabiyla sayfaya giris yapildigi dogrulanir
+    And   kullanici sayfayi kapatir
+
