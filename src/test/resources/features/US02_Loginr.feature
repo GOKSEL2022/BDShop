@@ -1,5 +1,5 @@
-@US01    @regression     @smoke
-Feature: sayfaya kayit tesi
+@US02    @regression     @smoke
+Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
   Background:
     Given kullanici url ye gider
     When  kullanici anasayfanin acildigini dogrular
