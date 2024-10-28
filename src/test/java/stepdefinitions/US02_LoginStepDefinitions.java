@@ -6,7 +6,7 @@ import pages.AllPages;
 import utilies.ConfigReader;
 import utilies.Driver;
 import static utilies.ReusableMethods.clickWithJS;
-public class US01_HomeStepDefinitions {
+public class US02_LoginStepDefinitions {
     AllPages pages=new AllPages();    SoftAssert softAssert=new SoftAssert();
     @Given("kullanici url ye gider")
     public void kullaniciUrlYeGider() {
