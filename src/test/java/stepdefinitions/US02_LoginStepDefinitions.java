@@ -86,4 +86,8 @@ public class US02_LoginStepDefinitions {
     public void kullaniciHesabiylaSayfayaGirisYapildigiDogrulanir() {
         assert pages.homePage().kayitliKullaniciMerhabaTextHome.isDisplayed();
     }
+
+    @And("kullanici remember me checkboxin secimini kaldirir")
+    public void kullaniciRememberMeCheckboxinSeciminiKaldirir() {
+    }
 }

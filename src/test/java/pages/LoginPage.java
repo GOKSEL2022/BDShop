@@ -25,4 +25,7 @@ public class LoginPage {
 
     @FindBy(xpath = "//*[@id='pass-popup']")
     public WebElement sifreTextboxLogin;
+
+    @FindBy(xpath = "//*[@id='remember_meLBIkeFh3sS']")
+    public WebElement rememberMeCheckboxLogin;
 }
