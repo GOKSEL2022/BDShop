@@ -56,10 +56,10 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
     And   kullanici sayfayi kapatir
 
   @TC07
-  Scenario: eposta ve sifre alanlarina valid degerle sayfaya giris testi
+  Scenario: eposta ve sifre alanlarina invalid degerle sayfaya giris testi
     And   kullanici loginHome butona tiklar
-    And   kullanici eposta alanina valid deger girer
-    And   kullanici sifre alanina valid deger girer
+    And   kullanici eposta alanina invalid deger girer
+    And   kullanici sifre alanina invalid deger girer
     And   kullanici loginLogin butona tiklar
     And   kullanici hesabiyla sayfaya giris yapildigi dogrulanir
     And   kullanici sayfayi kapatir
@@ -74,5 +74,5 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
     And   kullanici hesabiyla sayfaya giris yapildigi dogrulanir
     And   kullanici sayfayi kapatir
 
-  Scena
+
 
