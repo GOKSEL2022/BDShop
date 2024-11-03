@@ -96,7 +96,6 @@ public class US02_LoginStepDefinitions {
     public void kullaniciEpostaAlaninaInvalidDegerGirer() {
         pages.loginPage().epostaTextboxLogin.sendKeys(ConfigReader.getProperty("invalidMail"));
     }
-
     @And("kullanici sifre alanina invalid deger girer")
     public void kullaniciSifreAlaninaInvalidDegerGirer() {
         pages.loginPage().sifreTextboxLogin.sendKeys(ConfigReader.getProperty("invalidSifre"));
