@@ -10,8 +10,9 @@ public class HomePage {
     public HomePage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    @FindBy(xpath = "//*[@href='#social-login-popup']")
+    @FindBy(xpath = "//*[@class='authorization-link']")
     public WebElement loginButonHome;
+    //*[@href='#social-login-popup']
     //a[normalize-space()='Log In']
 
     @FindBy(xpath = "//*[@class='mgz-icon mgz-icon-close']")
