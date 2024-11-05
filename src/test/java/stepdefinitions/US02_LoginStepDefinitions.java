@@ -18,7 +18,8 @@ public class US02_LoginStepDefinitions {
     }
     @And("kullanici loginHome butona tiklar")
     public void kullaniciLoginHomeButonaTiklar() {
-        clickWithJS(pages.homePage().loginButonHome);
+        //clickWithJS(pages.homePage().loginButonHome);
+        pages.homePage().loginButonHome.click();
         /*
         if (!pages.homePage().alertCloseButonHome.isDisplayed()){
             clickWithJS(pages.homePage().loginButonHome);
@@ -33,9 +34,8 @@ public class US02_LoginStepDefinitions {
     }
     @And("kullanici email ve password alanlarinda This is a required field uyarisini goruntuler")
     public void kullaniciEmailVePasswordAlanlarindaThisIsARequiredFieldUyarisiniGoruntuler() {
-        softAssert.assertTrue(pages.loginPage().errorMessageThisIsARequiredFiel1dLogin.isDisplayed());
-        softAssert.assertTrue(pages.loginPage().errorMessageThisIsARequiredFiel2dLogin.isDisplayed());
-        softAssert.assertAll();
+        assert pages.loginPage().errorMessageThisIsARequiredFiel1dLogin.isDisplayed();
+        assert pages.loginPage().errorMessageThisIsARequiredFiel2dLogin.isDisplayed();
     }
     @And("kullanici sayfayi kapatir")
     public void kullaniciSayfayiKapatir() {
