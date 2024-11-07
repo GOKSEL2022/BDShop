@@ -14,4 +14,12 @@ public class US01_RegisterStepDefs {
     @And("kullanici register sayfasina yonlendirildigini dogrular")
     public void kullaniciRegisterSayfasinaYonlendirildiginiDogrular() {
     }
+
+    @And("kullanici create an account butona tiklar")
+    public void kullaniciCreateAnAccountButonaTiklar() {
+    }
+
+    @And("kullanici zorunlu alanlar uzerinde This is a required field uyarisini goruntuler")
+    public void kullaniciZorunluAlanlarUzerindeThisIsARequiredFieldUyarisiniGoruntuler() {
+    }
 }
