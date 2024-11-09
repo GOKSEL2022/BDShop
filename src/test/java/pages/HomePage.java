@@ -26,4 +26,7 @@ public class HomePage {
 
     @FindBy(xpath = "(//*[.='Register'])[1]")
     public WebElement registerButonHome;
+
+    //@FindBy(xpath = "//*[@id='idgD1Iwfmd']")
+    //    public WebElement registerButton;
 }
