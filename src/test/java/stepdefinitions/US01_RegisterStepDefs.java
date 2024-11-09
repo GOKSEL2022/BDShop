@@ -3,6 +3,8 @@ import io.cucumber.java.en.*;
 import org.openqa.selenium.interactions.Actions;
 import pages.AllPages;
 import utilies.Driver;
+import utilies.ReusableMethods;
+
 import static utilies.ReusableMethods.clickWithJS;
 public class US01_RegisterStepDefs {
     AllPages pages=new AllPages();
@@ -13,10 +15,12 @@ public class US01_RegisterStepDefs {
     }
     @And("kullanici register sayfasina yonlendirildigini dogrular")
     public void kullaniciRegisterSayfasinaYonlendirildiginiDogrular() {
+        assert pages.accountPage().newCustomersTextTitleAccount.isDisplayed();
     }
 
     @And("kullanici create an account butona tiklar")
     public void kullaniciCreateAnAccountButonaTiklar() {
+
     }
 
     @And("kullanici zorunlu alanlar uzerinde This is a required field uyarisini goruntuler")
