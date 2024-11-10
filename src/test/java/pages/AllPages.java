@@ -7,7 +7,7 @@ public class AllPages {
 
     private HomePage homePage;
     private LoginPage loginPage;
-    private AccountPage accountPage;
+    private CreatePage createPage;
     public HomePage homePage() {
         if (homePage == null) {
             homePage = new HomePage();
@@ -21,11 +21,11 @@ public class AllPages {
         return loginPage;
     }
 
-    public AccountPage accountPage() {
-        if (accountPage == null) {
-            accountPage = new AccountPage();
+    public CreatePage createPage() {
+        if (createPage == null) {
+            createPage = new CreatePage();
         }
-        return accountPage;
+        return createPage;
     }
 
 }
