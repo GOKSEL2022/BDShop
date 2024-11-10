@@ -15,9 +15,8 @@ public class US01_RegisterStepDefs {
     }
     @And("kullanici register sayfasina yonlendirildigini dogrular")
     public void kullaniciRegisterSayfasinaYonlendirildiginiDogrular() {
-        assert pages.accountPage().newCustomersTextTitleAccount.isDisplayed();
+        assert pages.createPage().newCustomersTextTitleCreate.isDisplayed();
     }
-
     @And("kullanici create an account butona tiklar")
     public void kullaniciCreateAnAccountButonaTiklar() {
 
