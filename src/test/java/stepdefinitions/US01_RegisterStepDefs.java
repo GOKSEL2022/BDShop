@@ -15,14 +15,14 @@ public class US01_RegisterStepDefs {
     }
     @And("kullanici register sayfasina yonlendirildigini dogrular")
     public void kullaniciRegisterSayfasinaYonlendirildiginiDogrular() {
-        assert pages.createPage().newCustomersTextTitleCreate.isDisplayed();
+        assert pages.registerPage().newCustomersTextTitleRegister.isDisplayed();
     }
     @And("kullanici create an account butona tiklar")
     public void kullaniciCreateAnAccountButonaTiklar() {
-
+        clickWithJS(pages.registerPage().createAnAccountButtonRegister);
     }
-
     @And("kullanici zorunlu alanlar uzerinde This is a required field uyarisini goruntuler")
     public void kullaniciZorunluAlanlarUzerindeThisIsARequiredFieldUyarisiniGoruntuler() {
+        assert pages.registerPage().thisIsARequiredFieldAlertRegister.isDisplayed();
     }
 }

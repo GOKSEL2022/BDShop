@@ -19,14 +19,14 @@ public class US02_LoginStepDefinitions {
     @And("kullanici loginHome butona tiklar")
     public void kullaniciLoginHomeButonaTiklar() {
         //clickWithJS(pages.homePage().loginButonHome);
-        pages.homePage().loginButonHome.click();
-        /*
+        //pages.homePage().loginButonHome.click();
+
         if (!pages.homePage().alertCloseButonHome.isDisplayed()){
             clickWithJS(pages.homePage().loginButonHome);
         }else if (pages.homePage().alertCloseButonHome.isDisplayed())
             clickWithJS(pages.homePage().alertCloseButonHome);
             clickWithJS(pages.homePage().loginButonHome);
-         */
+
     }
     @And("kullanici loginLogin butona tiklar")
     public void kullaniciLoginLoginButonaTiklar() {
