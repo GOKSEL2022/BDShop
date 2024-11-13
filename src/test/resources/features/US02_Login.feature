@@ -3,16 +3,15 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
   Background:
     Given kullanici url ye gider
     When  kullanici anasayfanin acildigini dogrular
+    And   kullanici loginHome butona tiklar
 
   Scenario: sayfa_acilis_testi
-    And   kullanici loginHome butona tiklar
     And   kullanici loginLogin butona tiklar
     And   kullanici email ve password alanlarinda This is a required field uyarisini goruntuler
     And   kullanici sayfayi kapatir
 
     @TC02
  Scenario: eposta ve sifre alanlari oncesi bosluk birakma testi
-    And   kullanici loginHome butona tiklar
     And   kullanici eposta alanina bosluk birakarak valid deger girer
     And   kullanici sifre alanina bosluk birakarak valid deger girer
     And   kullanici loginLogin butona tiklar
@@ -21,7 +20,6 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
 
   @TC03
   Scenario: eposta ve sifre alanlari oncesi ozel karakter testi
-    And   kullanici loginHome butona tiklar
     And   kullanici eposta alanina ozel karakterle birlikte valid deger girer
     And   kullanici sifre alanina ozel karakterle birlikte  valid deger girer
     And   kullanici loginLogin butona tiklar
@@ -30,7 +28,6 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
 
   @TC04
   Scenario: eposta ve sifre alanlari oncesi sayilarla test
-    And   kullanici loginHome butona tiklar
     And   kullanici eposta alanina sayilarla birlikte valid deger girer
     And   kullanici sifre alanina sayilarla birlikte  valid deger girer
     And   kullanici loginLogin butona tiklar
@@ -39,7 +36,6 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
 
   @TC05
   Scenario: eposta ve sifre alanlarinin bos birakilma sonrasi giris testi
-    And   kullanici loginHome butona tiklar
     And   kullanici eposta alanina bosluk girer
     And   kullanici sifre alanina bosluk girer
     And   kullanici loginLogin butona tiklar
@@ -48,7 +44,6 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
 
   @TC06
   Scenario: eposta ve sifre alanlarina valid degerle sayfaya giris testi
-    And   kullanici loginHome butona tiklar
     And   kullanici eposta alanina valid deger girer
     And   kullanici sifre alanina valid deger girer
     And   kullanici loginLogin butona tiklar
@@ -57,7 +52,6 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
 
   @TC07
   Scenario: eposta ve sifre alanlarina invalid degerle sayfaya giris testi
-    And   kullanici loginHome butona tiklar
     And   kullanici eposta alanina invalid deger girer
     And   kullanici sifre alanina invalid deger girer
     And   kullanici loginLogin butona tiklar
@@ -66,13 +60,16 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
 
   @TC08
   Scenario: Remember Me What's this? secenegi isaretlenmeden valid degerlerle giris testi
-    And   kullanici loginHome butona tiklar
     And   kullanici eposta alanina valid deger girer
     And   kullanici sifre alanina valid deger girer
     And   kullanici remember me checkboxin secimini kaldirir
     And   kullanici loginLogin butona tiklar
     And   kullanici hesabiyla sayfaya giris yapildigi dogrulanir
     And   kullanici sayfayi kapatir
+
+   @TC09
+   Scenario: Forgot linke tiklayarak sifremi unuttum alanina yonlendirilme testi
+     And kullanici forgot linke tiklar
 
 
 
