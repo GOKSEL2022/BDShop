@@ -103,4 +103,8 @@ public class US02_LoginStepDefinitions {
     public void kullaniciSifreAlaninaInvalidDegerGirer() {
         pages.loginPage().sifreTextboxLogin.sendKeys(ConfigReader.getProperty("invalidSifre"));
     }
+
+    @And("kullanici forgot linke tiklar")
+    public void kullaniciForgotLinkeTiklar() {
+    }
 }
