@@ -106,5 +106,6 @@ public class US02_LoginStepDefinitions {
 
     @And("kullanici forgot linke tiklar")
     public void kullaniciForgotLinkeTiklar() {
+        clickWithJS(pages.loginPage().forgotLinkLogin);
     }
 }
