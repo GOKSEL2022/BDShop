@@ -28,4 +28,7 @@ public class LoginPage {
 
     @FindBy(xpath = "//*[@id='remember_meLBIkeFh3sS']")
     public WebElement rememberMeCheckboxLogin;
+
+    @FindBy(xpath = "//*[@href='https://www.bdshop.com/customer/account/forgotpassword/']")
+    public WebElement forgotLinkLogin;
 }
