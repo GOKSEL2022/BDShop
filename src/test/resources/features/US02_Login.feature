@@ -70,6 +70,7 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
    @TC09
    Scenario: Forgot linke tiklayarak sifremi unuttum alanina yonlendirilme testi
      And kullanici forgot linke tiklar
+     And kullanici forgot password sayfasinda sifresini sifirlayabilecegini dogrular
 
 
 
