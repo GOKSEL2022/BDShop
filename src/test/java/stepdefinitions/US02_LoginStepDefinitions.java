@@ -108,8 +108,8 @@ public class US02_LoginStepDefinitions {
     public void kullaniciForgotLinkeTiklar() {
         clickWithJS(pages.loginPage().forgotLinkLogin);
     }
-
     @And("kullanici forgot password sayfasinda sifresini sifirlayabilecegini dogrular")
     public void kullaniciForgotPasswordSayfasindaSifresiniSifirlayabileceginiDogrular() {
+        assert Driver.getDriver().getCurrentUrl().contains("forgotpassword");
     }
 }
