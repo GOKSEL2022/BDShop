@@ -71,6 +71,9 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
    Scenario: Forgot linke tiklayarak sifremi unuttum alanina yonlendirilme testi
      And kullanici forgot linke tiklar
      And kullanici forgot password sayfasinda sifresini sifirlayabilecegini dogrular
+     And kullanici reset my password butona tiklar
+     And kullanici zorunlu alanlarda This is a required field uyarisini goruntuler
+     And kullanici sayfayi kapatir
 
 
 
