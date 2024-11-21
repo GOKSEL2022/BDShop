@@ -112,4 +112,12 @@ public class US02_LoginStepDefinitions {
     public void kullaniciForgotPasswordSayfasindaSifresiniSifirlayabileceginiDogrular() {
         assert Driver.getDriver().getCurrentUrl().contains("forgotpassword");
     }
+
+    @And("kullanici reset my password butona tiklar")
+    public void kullaniciResetMyPasswordButonaTiklar() {
+    }
+
+    @And("kullanici zorunlu alanlarda This is a required field uyarisini goruntuler")
+    public void kullaniciZorunluAlanlardaThisIsARequiredFieldUyarisiniGoruntuler() {
+    }
 }
