@@ -115,9 +115,11 @@ public class US02_LoginStepDefinitions {
 
     @And("kullanici reset my password butona tiklar")
     public void kullaniciResetMyPasswordButonaTiklar() {
+        clickWithJS(pages.loginPage().resertMyPasswordButonLogin);
     }
 
     @And("kullanici zorunlu alanlarda This is a required field uyarisini goruntuler")
     public void kullaniciZorunluAlanlardaThisIsARequiredFieldUyarisiniGoruntuler() {
+        assert pages.loginPage().errorMessageThisIsARequiredFiel1dLogin.isDisplayed();
     }
 }
