@@ -31,4 +31,10 @@ public class LoginPage {
 
     @FindBy(xpath = "//*[@href='https://www.bdshop.com/customer/account/forgotpassword/']")
     public WebElement forgotLinkLogin;
+
+    @FindBy(xpath = "(//*[.='Reset My Password'])[1]")
+    public WebElement resertMyPasswordButonLogin;
+
+
+    //
 }
