@@ -75,5 +75,8 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
      And kullanici zorunlu alanlarda This is a required field uyarisini goruntuler
      And kullanici sayfayi kapatir
 
+  @TC10
+  Scenario: Klavye tuslarini (Tab ve Enter) kullanarak Uygulamada oturum acmayi dogrulama testi
+
 
 
