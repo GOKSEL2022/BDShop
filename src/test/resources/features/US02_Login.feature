@@ -55,7 +55,7 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
     And   kullanici eposta alanina invalid deger girer
     And   kullanici sifre alanina invalid deger girer
     And   kullanici loginLogin butona tiklar
-    And   kullanici hesabiyla sayfaya giris yapildigi dogrulanir
+    And   kullanici hesabiyla sayfaya giris isleminin basarisiz oldugu dogrulanir
     And   kullanici sayfayi kapatir
 
   @TC08
@@ -77,6 +77,11 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
 
   @TC10
   Scenario: Klavye tuslarini (Tab ve Enter) kullanarak Uygulamada oturum acmayi dogrulama testi
+    And   kullanici eposta alanina valid deger girer
+    And   kullanici tab tusu ile sifre alanina gelerek valid sifre girer
+    And   kullanici tab tusu ile loginLogin butona gelir ve entera tiklar
+    And   kullanici hesabiyla sayfaya giris yapildigi dogrulanir
+    And   kullanici sayfayi kapatir
 
 
 
