@@ -34,9 +34,7 @@ public class US02_LoginStepDefinitions {
         }else if (pages.homePage().alertCloseButonHome.isDisplayed())
             clickWithJS(pages.homePage().alertCloseButonHome);
             clickWithJS(pages.homePage().loginButonHome);
-
          */
-
     }
     @And("kullanici loginLogin butona tiklar")
     public void kullaniciLoginLoginButonaTiklar() {
@@ -131,5 +129,17 @@ public class US02_LoginStepDefinitions {
     @And("kullanici zorunlu alanlarda This is a required field uyarisini goruntuler")
     public void kullaniciZorunluAlanlardaThisIsARequiredFieldUyarisiniGoruntuler() {
         assert pages.loginPage().errorMessageThisIsARequiredFiel1dLogin.isDisplayed();
+    }
+
+    @And("kullanici hesabiyla sayfaya giris isleminin basarisiz oldugu dogrulanir")
+    public void kullaniciHesabiylaSayfayaGirisIslemininBasarisizOlduguDogrulanir() {
+    }
+
+    @And("kullanici tab tusu ile sifre alanina gelerek valid sifre girer")
+    public void kullaniciTabTusuIleSifreAlaninaGelerekValidSifreGirer() {
+    }
+
+    @And("kullanici tab tusu ile loginLogin butona gelir ve entera tiklar")
+    public void kullaniciTabTusuIleLoginLoginButonaGelirVeEnteraTiklar() {
     }
 }
