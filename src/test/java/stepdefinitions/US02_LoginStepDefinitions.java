@@ -1,13 +1,17 @@
 package stepdefinitions;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.asserts.SoftAssert;
 import pages.AllPages;
 import utilies.ConfigReader;
 import utilies.Driver;
 import static utilies.ReusableMethods.clickWithJS;
+import static utilies.ReusableMethods.clickWithTimeOut;
+
 public class US02_LoginStepDefinitions {
-    AllPages pages=new AllPages();    SoftAssert softAssert=new SoftAssert();
+    AllPages pages=new AllPages();  Actions actions=new Actions(Driver.getDriver());
+    SoftAssert softAssert=new SoftAssert();
     @Given("kullanici url ye gider")
     public void kullaniciUrlYeGider() {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
@@ -19,14 +23,18 @@ public class US02_LoginStepDefinitions {
     @And("kullanici loginHome butona tiklar")
     public void kullaniciLoginHomeButonaTiklar() {
         //clickWithJS(pages.homePage().loginButonHome);
+        actions.moveToElement(pages.homePage().loginButonHome).perform();
+        actions.doubleClick(pages.homePage().loginButonHome).perform();
+        //clickWithTimeOut(pages.homePage().loginButonHome,10);
         //pages.homePage().loginButonHome.click();
 
+        /*
         if (!pages.homePage().alertCloseButonHome.isDisplayed()){
             clickWithJS(pages.homePage().loginButonHome);
         }else if (pages.homePage().alertCloseButonHome.isDisplayed())
             clickWithJS(pages.homePage().alertCloseButonHome);
             clickWithJS(pages.homePage().loginButonHome);
-
+         */
     }
     @And("kullanici loginLogin butona tiklar")
     public void kullaniciLoginLoginButonaTiklar() {
@@ -121,5 +129,17 @@ public class US02_LoginStepDefinitions {
     @And("kullanici zorunlu alanlarda This is a required field uyarisini goruntuler")
     public void kullaniciZorunluAlanlardaThisIsARequiredFieldUyarisiniGoruntuler() {
         assert pages.loginPage().errorMessageThisIsARequiredFiel1dLogin.isDisplayed();
+    }
+
+    @And("kullanici hesabiyla sayfaya giris isleminin basarisiz oldugu dogrulanir")
+    public void kullaniciHesabiylaSayfayaGirisIslemininBasarisizOlduguDogrulanir() {
+    }
+
+    @And("kullanici tab tusu ile sifre alanina gelerek valid sifre girer")
+    public void kullaniciTabTusuIleSifreAlaninaGelerekValidSifreGirer() {
+    }
+
+    @And("kullanici tab tusu ile loginLogin butona gelir ve entera tiklar")
+    public void kullaniciTabTusuIleLoginLoginButonaGelirVeEnteraTiklar() {
     }
 }
