@@ -12,6 +12,7 @@ public class HomePage {
     }
     @FindBy(xpath = "//*[@class='authorization-link']")
     public WebElement loginButonHome;
+    //a[@class='ajax-login-link social-login']
     //*[@href='#social-login-popup']
     //a[normalize-space()='Log In']
 
