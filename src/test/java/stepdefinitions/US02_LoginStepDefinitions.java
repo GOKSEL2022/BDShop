@@ -137,6 +137,8 @@ public class US02_LoginStepDefinitions {
 
     @And("kullanici tab tusu ile sifre alanina gelerek valid sifre girer")
     public void kullaniciTabTusuIleSifreAlaninaGelerekValidSifreGirer() {
+        pages.loginPage().epostaTextboxLogin.sendKeys(ConfigReader.getProperty("validMail"),Keys.TAB,"validSifre",
+                Keys.TAB,Keys.TAB,Keys.TAB,Keys.ENTER);
     }
 
     @And("kullanici tab tusu ile loginLogin butona gelir ve entera tiklar")
