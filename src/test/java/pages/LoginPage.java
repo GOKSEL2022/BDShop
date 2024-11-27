@@ -35,6 +35,8 @@ public class LoginPage {
     @FindBy(xpath = "(//*[.='Reset My Password'])[1]")
     public WebElement resertMyPasswordButonLogin;
 
+    @FindBy(xpath = "//*[.='The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.']")
+    public WebElement basarisizKullaniciGirisiAlertLogin;
 
-    //
+
 }
