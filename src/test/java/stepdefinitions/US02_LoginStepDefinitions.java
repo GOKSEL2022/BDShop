@@ -133,8 +133,8 @@ public class US02_LoginStepDefinitions {
 
     @And("kullanici hesabiyla sayfaya giris isleminin basarisiz oldugu dogrulanir")
     public void kullaniciHesabiylaSayfayaGirisIslemininBasarisizOlduguDogrulanir() {
+        assert pages.loginPage().basarisizKullaniciGirisiAlertLogin.isDisplayed();
     }
-
     @And("kullanici tab tusu ile sifre alanina gelerek valid sifre girer")
     public void kullaniciTabTusuIleSifreAlaninaGelerekValidSifreGirer() {
         pages.loginPage().epostaTextboxLogin.sendKeys(ConfigReader.getProperty("validMail"),Keys.TAB,"validSifre",
