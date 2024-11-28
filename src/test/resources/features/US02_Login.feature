@@ -83,5 +83,8 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
     And   kullanici hesabiyla sayfaya giris yapildigi dogrulanir
     And   kullanici sayfayi kapatir
 
+   @TC11
+   Scenario:
+
 
 
