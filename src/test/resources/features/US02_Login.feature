@@ -84,7 +84,15 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
     And   kullanici sayfayi kapatir
 
    @TC11
-   Scenario:
+   Scenario: kullanici girisi yapildiktan sonra hesaptan cikis yapabilme testi
+     And   kullanici eposta alanina valid deger girer
+     And   kullanici sifre alanina valid deger girer
+     And   kullanici loginLogin butona tiklar
+     And   kullanici hesabiyla sayfaya giris yapildigi dogrulanir
+     And   kullanici hesabim ikona gelir
+     And   kullanici log out linke tiklar
+     And   kullanici kullanici hesaptan cikis yapildigini dogrular
+     And   kullanici sayfayi kapatir
 
 
 
