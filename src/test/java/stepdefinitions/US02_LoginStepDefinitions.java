@@ -144,4 +144,17 @@ public class US02_LoginStepDefinitions {
     @And("kullanici tab tusu ile loginLogin butona gelir ve entera tiklar")
     public void kullaniciTabTusuIleLoginLoginButonaGelirVeEnteraTiklar() {
     }
+
+    @And("kullanici hesabim ikona gelir")
+    public void kullaniciHesabimIkonaGelir() {
+        actions.moveToElement(pages.homePage().hesabimIkon).perform();
+    }
+
+    @And("kullanici log out linke tiklar")
+    public void kullaniciLogOutLinkeTiklar() {
+    }
+
+    @And("kullanici kullanici hesaptan cikis yapildigini dogrular")
+    public void kullaniciKullaniciHesaptanCikisYapildiginiDogrular() {
+    }
 }
