@@ -147,6 +147,7 @@ public class US02_LoginStepDefinitions {
 
     @And("kullanici hesabim ikona gelir")
     public void kullaniciHesabimIkonaGelir() {
+        actions.moveToElement(pages.homePage().hesabimIkon).perform();
     }
 
     @And("kullanici log out linke tiklar")
