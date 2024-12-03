@@ -152,6 +152,7 @@ public class US02_LoginStepDefinitions {
 
     @And("kullanici log out linke tiklar")
     public void kullaniciLogOutLinkeTiklar() {
+        clickWithJS(pages.loginPage().logoutLinkLogin);
     }
 
     @And("kullanici kullanici hesaptan cikis yapildigini dogrular")
