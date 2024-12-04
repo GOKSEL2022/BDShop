@@ -38,5 +38,8 @@ public class LoginPage {
     @FindBy(xpath = "//*[.='The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.']")
     public WebElement basarisizKullaniciGirisiAlertLogin;
 
+    @FindBy(xpath = "(//*[.='Log Out'])[1]")
+    public WebElement logoutLinkLogin;
+
 
 }
