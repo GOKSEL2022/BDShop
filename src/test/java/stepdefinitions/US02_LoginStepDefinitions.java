@@ -157,5 +157,6 @@ public class US02_LoginStepDefinitions {
 
     @And("kullanici kullanici hesaptan cikis yapildigini dogrular")
     public void kullaniciKullaniciHesaptanCikisYapildiginiDogrular() {
+        assert pages.loginPage().epostaTextboxLogin.isDisplayed();
     }
 }
