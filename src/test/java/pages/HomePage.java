@@ -30,4 +30,9 @@ public class HomePage {
 
     //@FindBy(xpath = "//*[@id='idgD1Iwfmd']")
     //    public WebElement registerButton;
+
+    @FindBy(xpath = "//*[@class='customer-name acc-btn']")
+    public WebElement hesabimIkonHome;
+
+
 }
