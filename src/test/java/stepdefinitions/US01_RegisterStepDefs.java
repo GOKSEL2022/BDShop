@@ -25,4 +25,8 @@ public class US01_RegisterStepDefs {
     public void kullaniciZorunluAlanlarUzerindeThisIsARequiredFieldUyarisiniGoruntuler() {
         assert pages.registerPage().thisIsARequiredFieldAlertRegister.isDisplayed();
     }
+
+    @And("kullanici first name alanina bosluk birakarak valid girer")
+    public void kullaniciFirstNameAlaninaBoslukBirakarakValidGirer() {
+    }
 }
