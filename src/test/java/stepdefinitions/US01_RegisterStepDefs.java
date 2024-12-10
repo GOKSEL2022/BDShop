@@ -29,4 +29,8 @@ public class US01_RegisterStepDefs {
     @And("kullanici first name alanina bosluk birakarak valid girer")
     public void kullaniciFirstNameAlaninaBoslukBirakarakValidGirer() {
     }
+
+    @And("kullanici last name alanina bosluk birakarak valid girer")
+    public void kullaniciLastNameAlaninaBoslukBirakarakValidGirer() {
+    }
 }
