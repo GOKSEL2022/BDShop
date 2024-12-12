@@ -33,4 +33,8 @@ public class US01_RegisterStepDefs {
     @And("kullanici last name alanina bosluk birakarak valid girer")
     public void kullaniciLastNameAlaninaBoslukBirakarakValidGirer() {
     }
+
+    @And("kullanici first name ve last name alanlarinda zorunlu alan uyarisi olmadigini dogrular")
+    public void kullaniciFirstNameVeLastNameAlanlarindaZorunluAlanUyarisiOlmadiginiDogrular() {
+    }
 }
