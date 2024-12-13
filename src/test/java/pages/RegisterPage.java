@@ -17,4 +17,10 @@ public class RegisterPage {
 
     @FindBy(xpath = "(//*[.='This is a required field.'])[1]")
     public WebElement thisIsARequiredFieldAlertRegister;
+
+    @FindBy(xpath = "//input[@id='firstname']")
+    public WebElement firstNameTextboxRegister;
+
+    @FindBy(xpath = "//input[@id='lastname']")
+    public WebElement lastNameTextboxRegister;
 }
