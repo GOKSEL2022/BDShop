@@ -30,10 +30,11 @@ public class US01_RegisterStepDefs {
 
     @And("kullanici first name alanina bosluk birakarak valid girer")
     public void kullaniciFirstNameAlaninaBoslukBirakarakValidGirer() {
-        pages.registerPage().firstNameTextboxRegister.sendKeys(Keys.SPACE+ ConfigReader.getProperty("Goksel"));
+        pages.registerPage().firstNameTextboxRegister.sendKeys(Keys.SPACE+ ConfigReader.getProperty("firstNameRegister"));
     }
     @And("kullanici last name alanina bosluk birakarak valid girer")
     public void kullaniciLastNameAlaninaBoslukBirakarakValidGirer() {
+        pages.registerPage().lastNameTextboxRegister.sendKeys(Keys.SPACE+ ConfigReader.getProperty("firstNameRegister"));
     }
 
     @And("                                                              ")
