@@ -1,4 +1,4 @@
-@US02    @regression     @smoke
+@US02
 Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
   Background:
     Given kullanici url ye gider
@@ -12,7 +12,7 @@ Feature: sayfaya kayitli giris icin pozitif ve negatif test senaryolari
     And   kullanici sayfayi kapatir
 
   @US02_@TC02
- Scenario: eposta ve sifre alanlari oncesi bosluk birakma testi
+  Scenario: eposta ve sifre alanlari oncesi bosluk birakma testi
     And   kullanici eposta alanina bosluk birakarak valid deger girer
     And   kullanici sifre alanina bosluk birakarak valid deger girer
     And   kullanici loginLogin butona tiklar
