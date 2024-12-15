@@ -25,7 +25,7 @@ public class HomePage {
     @FindBy(xpath = "(//*[.='MERHABA,'])[1]")
     public WebElement kayitliKullaniciMerhabaTextHome;
 
-    @FindBy(xpath = "(//*[.='Register'])[1]")
+    @FindBy(xpath = "//a[@id='idrSZ5ktqq']")
     public WebElement registerButonHome;
 
     //@FindBy(xpath = "//*[@id='idgD1Iwfmd']")
