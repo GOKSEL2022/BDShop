@@ -23,3 +23,12 @@ Feature: sayfaya uyelik icin pozitif ve negatif test senaryolari
     And kullanici email ve password alanlarinda This is a required field uyarisini goruntuler
     And kullanici sayfayi kapatir
 
+  @US01_TC002
+  Scenario: ad ve soyad alanlarinda valid deger oncesi sayi ile hesap kaydini dogrulama testi
+    And kullanici first name alanina sayi ile birlikte valid girer
+    And kullanici last name alanina sayi ile birlikte valid girer
+    And kullanici create an account butona tiklar
+    And kullanici first name ve last name alanlarinda zorunlu alan uyarisi olmadigini dogrular
+    And kullanici email ve password alanlarinda This is a required field uyarisini goruntuler
+    And kullanici sayfayi kapatir
+
