@@ -40,4 +40,8 @@ public class US01_RegisterStepDefs {
     @And("kullanici first name ve last name alanlarinda zorunlu alan uyarisi olmadigini dogrular")
     public void kullaniciFirstNameVeLastNameAlanlarindaZorunluAlanUyarisiOlmadiginiDogrular() {
     }
+
+    @And("kullanici first name alanina sayi ile birlikte valid girer")
+    public void kullaniciFirstNameAlaninaSayiIleBirlikteValidGirer() {
+    }
 }
