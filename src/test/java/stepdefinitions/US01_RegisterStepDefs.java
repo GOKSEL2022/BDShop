@@ -1,4 +1,5 @@
 package stepdefinitions;
+import com.github.javafaker.Faker;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -43,5 +44,6 @@ public class US01_RegisterStepDefs {
 
     @And("kullanici first name alanina sayi ile birlikte valid girer")
     public void kullaniciFirstNameAlaninaSayiIleBirlikteValidGirer() {
+        pages.registerPage().firstNameTextboxRegister.sendKeys(Faker.instance().number().randomNumber()+ ConfigReader.getProperty("firstNameRegister"));
     }
 }
