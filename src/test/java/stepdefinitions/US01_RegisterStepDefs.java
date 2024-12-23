@@ -1,6 +1,7 @@
 package stepdefinitions;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.*;
+import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.AllPages;
@@ -8,6 +9,7 @@ import utilies.ConfigReader;
 import utilies.Driver;
 import utilies.ReusableMethods;
 
+import static org.junit.Assert.assertFalse;
 import static utilies.ReusableMethods.clickWithJS;
 public class US01_RegisterStepDefs {
     AllPages pages=new AllPages();
@@ -40,6 +42,8 @@ public class US01_RegisterStepDefs {
 
     @And("kullanici first name ve last name alanlarinda zorunlu alan uyarisi olmadigini dogrular")
     public void kullaniciFirstNameVeLastNameAlanlarindaZorunluAlanUyarisiOlmadiginiDogrular() {
+       assertFalse(pages.registerPage().thisIsARequiredFieldAlertRegister.isDisplayed());
+
     }
 
     @And("kullanici first name alanina sayi ile birlikte valid girer")
