@@ -7,8 +7,6 @@ import org.openqa.selenium.interactions.Actions;
 import pages.AllPages;
 import utilies.ConfigReader;
 import utilies.Driver;
-import utilies.ReusableMethods;
-
 import static org.junit.Assert.assertFalse;
 import static utilies.ReusableMethods.clickWithJS;
 public class US01_RegisterStepDefs {
@@ -53,5 +51,6 @@ public class US01_RegisterStepDefs {
 
     @And("kullanici last name alanina sayi ile birlikte valid girer")
     public void kullaniciLastNameAlaninaSayiIleBirlikteValidGirer() {
+        pages.registerPage().lastNameTextboxRegister.sendKeys(Faker.instance().number().randomNumber()+ ConfigReader.getProperty("firstNameRegister"));
     }
 }
