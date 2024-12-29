@@ -1,7 +1,6 @@
 package stepdefinitions;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.*;
-import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import pages.AllPages;
@@ -12,6 +11,7 @@ import static utilies.ReusableMethods.clickWithJS;
 public class US01_RegisterStepDefs {
     AllPages pages=new AllPages();
     Actions actions=new Actions(Driver.getDriver());
+    String symbol="++--//^^%*!..$#{[]}&";
     @And("kullanici registerHome butona tiklar")
     public void kullaniciRegisterHomeButonaTiklar() {
         clickWithJS(pages.homePage().registerButonHome);
@@ -56,5 +56,6 @@ public class US01_RegisterStepDefs {
 
     @And("kullanici first name alanina sembol ile birlikte valid girer")
     public void kullaniciFirstNameAlaninaSembolIleBirlikteValidGirer() {
+        pages.registerPage().firstNameTextboxRegister.sendKeys(Faker.instance().lorem().character()+symbol+ ConfigReader.getProperty("firstNameRegister"));
     }
 }
