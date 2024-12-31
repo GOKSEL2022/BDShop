@@ -51,7 +51,7 @@ public class US01_RegisterStepDefs {
 
     @And("kullanici last name alanina sayi ile birlikte valid girer")
     public void kullaniciLastNameAlaninaSayiIleBirlikteValidGirer() {
-        pages.registerPage().lastNameTextboxRegister.sendKeys(Faker.instance().number().randomNumber()+ ConfigReader.getProperty("firstNameRegister"));
+        pages.registerPage().lastNameTextboxRegister.sendKeys(Faker.instance().number().randomNumber()+ ConfigReader.getProperty("lastNameRegister"));
     }
 
     @And("kullanici first name alanina sembol ile birlikte valid girer")

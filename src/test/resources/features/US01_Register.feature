@@ -23,7 +23,7 @@ Feature: sayfaya uyelik icin pozitif ve negatif test senaryolari
     And kullanici email ve password alanlarinda This is a required field uyarisini goruntuler
     And kullanici sayfayi kapatir
 
-  @US01_TC002
+  @US01_TC003
   Scenario: ad ve soyad alanlarinda valid deger oncesi sayi ile hesap kaydini dogrulama testi
     And kullanici first name alanina sayi ile birlikte valid girer
     And kullanici last name alanina sayi ile birlikte valid girer
@@ -32,7 +32,7 @@ Feature: sayfaya uyelik icin pozitif ve negatif test senaryolari
     And kullanici email ve password alanlarinda This is a required field uyarisini goruntuler
     And kullanici sayfayi kapatir
 
-  @US01_TC002
+  @US01_TC004
   Scenario: ad ve soyad alanlarinda valid deger oncesi sembol ile hesap kaydini dogrulama testi
     And kullanici first name alanina sembol ile birlikte valid girer
     And kullanici last name alanina sembol ile birlikte valid girer
@@ -40,3 +40,6 @@ Feature: sayfaya uyelik icin pozitif ve negatif test senaryolari
     And kullanici first name ve last name alanlarinda zorunlu alan uyarisi olmadigini dogrular
     And kullanici email ve password alanlarinda This is a required field uyarisini goruntuler
     And kullanici sayfayi kapatir
+
+  @US01_TC004
+  Scenario:
