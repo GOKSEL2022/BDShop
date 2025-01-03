@@ -68,4 +68,9 @@ public class US01_RegisterStepDefs {
     public void kullaniciFirstNameAlaninaValidDegerGirer() {
         pages.registerPage().firstNameTextboxRegister.sendKeys(ConfigReader.getProperty("firstNameRegister"));
     }
+
+    @And("kullanici last name alanina valid deger girer")
+    public void kullaniciLastNameAlaninaValidDegerGirer() {
+        pages.registerPage().lastNameTextboxRegister.sendKeys(ConfigReader.getProperty("lastNameRegister"));
+    }
 }
