@@ -73,4 +73,8 @@ public class US01_RegisterStepDefs {
     public void kullaniciLastNameAlaninaValidDegerGirer() {
         pages.registerPage().lastNameTextboxRegister.sendKeys(ConfigReader.getProperty("lastNameRegister"));
     }
+
+    @And("kullanici eposta alanini bos birakarak create an account butona tiklar")
+    public void kullaniciEpostaAlaniniBosBirakarakCreateAnAccountButonaTiklar() {
+    }
 }
