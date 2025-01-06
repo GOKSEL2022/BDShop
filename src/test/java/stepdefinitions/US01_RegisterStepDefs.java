@@ -77,4 +77,8 @@ public class US01_RegisterStepDefs {
     @And("kullanici eposta alanini bos birakarak create an account butona tiklar")
     public void kullaniciEpostaAlaniniBosBirakarakCreateAnAccountButonaTiklar() {
     }
+
+    @And("kullanici Eposta ve sifre alanlarinda alanlarinda This is a required field uyarisini goruntuler")
+    public void kullaniciEpostaVeSifreAlanlarindaAlanlarindaThisIsARequiredFieldUyarisiniGoruntuler() {
+    }
 }
