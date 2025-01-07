@@ -76,11 +76,11 @@ public class US01_RegisterStepDefs {
 
     @And("kullanici eposta alanini bos birakarak create an account butona tiklar")
     public void kullaniciEpostaAlaniniBosBirakarakCreateAnAccountButonaTiklar() {
-        pages.registerPage().epostaTextboxRegister.sendKeys(Keys.SPACE,Keys.SPACE,Keys.SPACE);
+        //pages.registerPage().epostaTextboxRegister.sendKeys(Keys.SPACE,Keys.SPACE,Keys.SPACE);
         clickWithJS(pages.registerPage().createAnAccountButtonRegister);
-    }
-
-    @And("kullanici Eposta ve sifre alanlarinda alanlarinda This is a required field uyarisini goruntuler")
+    }@And("kullanici Eposta ve sifre alanlarinda alanlarinda This is a required field uyarisini goruntuler")
     public void kullaniciEpostaVeSifreAlanlarindaAlanlarindaThisIsARequiredFieldUyarisiniGoruntuler() {
+        //assertFalse(pages.registerPage().thisIsARequiredFieldAlertEpostaRegister.isDisplayed());
+        //assertFalse(pages.registerPage().thisIsARequiredFieldAlertSifreRegister.isDisplayed());
     }
 }
