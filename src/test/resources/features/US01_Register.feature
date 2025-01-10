@@ -50,10 +50,13 @@ Feature: sayfaya uyelik icin pozitif ve negatif test senaryolari
     And kullanici sayfayi kapatir
 
   @US01_TC005
-  Scenario: Gecerli girdiye sahip ad ve soyad alanlari ile Eposta alanini bos girisle kontrol etme testi
+  Scenario: Gecerli girdiye sahip ad ve soyad alanlari ile Gecersiz Eposta adresi saglayarak giris kontrol etme testi
     And kullanici first name alanina valid deger girer
     And kullanici last name alanina valid deger girer
-    And kullanici eposta alanini bos birakarak create an account butona tiklar
+    And kullanici register eposta alanina invalid deger girer
+    And kullanici create an account butona tiklar
+    And kullanici Eposta ve sifre alanlarinda alanlarinda This is a required field uyarisini goruntuler
+    And kullanici sayfayi kapatir
 
 
 

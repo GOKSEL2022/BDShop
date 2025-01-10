@@ -83,4 +83,8 @@ public class US01_RegisterStepDefs {
         //assertFalse(pages.registerPage().thisIsARequiredFieldAlertEpostaRegister.isDisplayed());
         //assertFalse(pages.registerPage().thisIsARequiredFieldAlertSifreRegister.isDisplayed());
     }
+
+    @And("kullanici register eposta alanina invalid deger girer")
+    public void kullaniciRegisterEpostaAlaninaInvalidDegerGirer() {
+    }
 }
