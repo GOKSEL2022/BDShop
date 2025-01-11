@@ -34,5 +34,9 @@ public class HomePage {
     @FindBy(xpath = "//*[@class='customer-name acc-btn']")
     public WebElement hesabimIkonHome;
 
+    @FindBy(xpath = "//*[@class='mgz-icon mgz-icon-close']")
+    public WebElement popupHappyNewYear2025ClouseButtonHome;
+
+
 
 }
