@@ -23,8 +23,12 @@ public class US02_LoginStepDefinitions {
     @And("kullanici loginHome butona tiklar")
     public void kullaniciLoginHomeButonaTiklar() {
         //clickWithJS(pages.homePage().loginButonHome);
-        actions.moveToElement(pages.homePage().loginButonHome).perform();
-        actions.doubleClick(pages.homePage().loginButonHome).perform();
+        if (pages.homePage().popupHappyNewYear2025ClouseButtonHome.isDisplayed()){
+            clickWithJS(pages.homePage().popupHappyNewYear2025ClouseButtonHome);
+        }else {
+            actions.moveToElement(pages.homePage().loginButonHome).perform();
+            actions.doubleClick(pages.homePage().loginButonHome).perform();
+        }
         //clickWithTimeOut(pages.homePage().loginButonHome,10);
         //pages.homePage().loginButonHome.click();
 

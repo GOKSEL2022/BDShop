@@ -14,7 +14,12 @@ public class US01_RegisterStepDefs {
     String symbol="++--//^^%*!..$#{[]}&";
     @And("kullanici registerHome butona tiklar")
     public void kullaniciRegisterHomeButonaTiklar() {
-        clickWithJS(pages.homePage().registerButonHome);
+        if(pages.homePage().popupHappyNewYear2025ClouseButtonHome.isDisplayed()) {
+            clickWithJS(pages.homePage().popupHappyNewYear2025ClouseButtonHome);
+        }
+        else {
+            clickWithJS(pages.homePage().registerButonHome);
+        }
     }
     @And("kullanici register sayfasina yonlendirildigini dogrular")
     public void kullaniciRegisterSayfasinaYonlendirildiginiDogrular() {
@@ -26,7 +31,7 @@ public class US01_RegisterStepDefs {
     }
     @And("kullanici zorunlu alanlar uzerinde This is a required field uyarisini goruntuler")
     public void kullaniciZorunluAlanlarUzerindeThisIsARequiredFieldUyarisiniGoruntuler() {
-        assert pages.registerPage().thisIsARequiredFieldAlertRegister.isDisplayed();
+        assert pages.registerPage().thisIsARequiredFieldAlertEmailRegister.isDisplayed();
     }
 
     @And("kullanici first name alanina bosluk birakarak valid girer")
@@ -40,7 +45,7 @@ public class US01_RegisterStepDefs {
 
     @And("kullanici first name ve last name alanlarinda zorunlu alan uyarisi olmadigini dogrular")
     public void kullaniciFirstNameVeLastNameAlanlarindaZorunluAlanUyarisiOlmadiginiDogrular() {
-       assertFalse(pages.registerPage().thisIsARequiredFieldAlertRegister.isDisplayed());
+       assertFalse(pages.registerPage().thisIsARequiredFieldAlertEmailRegister.isDisplayed());
 
     }
 
@@ -80,8 +85,8 @@ public class US01_RegisterStepDefs {
         clickWithJS(pages.registerPage().createAnAccountButtonRegister);
     }@And("kullanici Eposta ve sifre alanlarinda alanlarinda This is a required field uyarisini goruntuler")
     public void kullaniciEpostaVeSifreAlanlarindaAlanlarindaThisIsARequiredFieldUyarisiniGoruntuler() {
-        //assertFalse(pages.registerPage().thisIsARequiredFieldAlertEpostaRegister.isDisplayed());
-        //assertFalse(pages.registerPage().thisIsARequiredFieldAlertSifreRegister.isDisplayed());
+        assertFalse(pages.registerPage().thisIsARequiredFieldAlertEmailRegister.isDisplayed());
+        assertFalse(pages.registerPage().thisIsARequiredFieldAlertPasswordRegister.isDisplayed());
     }
 
     @And("kullanici register eposta alanina invalid deger girer")

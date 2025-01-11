@@ -15,12 +15,21 @@ public class RegisterPage {
     @FindBy(xpath = "(//*[.='Create an Account'])[2]")
     public WebElement createAnAccountButtonRegister;
 
-    @FindBy(xpath = "(//*[.='This is a required field.'])[1]")
-    public WebElement thisIsARequiredFieldAlertRegister;
-
     @FindBy(xpath = "//input[@id='firstname']")
     public WebElement firstNameTextboxRegister;
 
     @FindBy(xpath = "//input[@id='lastname']")
     public WebElement lastNameTextboxRegister;
+
+    @FindBy(xpath = "(//*[.='This is a required field.'])[1]")
+    public WebElement thisIsARequiredFieldAlertEmailRegister;
+
+    @FindBy(xpath = "(//*[.='This is a required field.'])[2]")
+    public WebElement thisIsARequiredFieldAlertPasswordRegister;
+
+    @FindBy(xpath = "(//*[.='This is a required field.'])[3]")
+    public WebElement thisIsARequiredFieldAlertConfirmPasswordRegister;
+
+    @FindBy(xpath = "(//*[.='This is a required field.'])[4]")
+    public WebElement pleaseTypeTheLettersAndNumbersBelowTextRegister;
 }
