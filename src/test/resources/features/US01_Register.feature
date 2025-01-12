@@ -58,5 +58,16 @@ Feature: sayfaya uyelik icin pozitif ve negatif test senaryolari
     And kullanici Eposta ve sifre alanlarinda alanlarinda This is a required field uyarisini goruntuler
     And kullanici sayfayi kapatir
 
+  @US01_TC006
+  Scenario: Eposta alanini alfabe sağlayarak dogrulama testi
+    And kullanici first name alanina valid deger girer
+    And kullanici last name alanina valid deger girer
+    And kullanici register eposta alanina alfabetik karalkter degeri girer
+    And kullanici create an account butona tiklar
+    And kullanici Eposta ve sifre alanlarinda alanlarinda This is a required field uyarisini goruntuler
+    And kullanici sayfayi kapatir
+
+
+
 
 
