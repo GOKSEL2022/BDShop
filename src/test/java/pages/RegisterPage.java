@@ -32,4 +32,7 @@ public class RegisterPage {
 
     @FindBy(xpath = "(//*[.='This is a required field.'])[4]")
     public WebElement pleaseTypeTheLettersAndNumbersBelowTextRegister;
+
+    @FindBy(xpath = "//*[@id='email_address']")
+    public WebElement emailTextboxRegister;
 }

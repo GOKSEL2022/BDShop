@@ -91,5 +91,11 @@ public class US01_RegisterStepDefs {
 
     @And("kullanici register eposta alanina invalid deger girer")
     public void kullaniciRegisterEpostaAlaninaInvalidDegerGirer() {
+        pages.registerPage().emailTextboxRegister.sendKeys(Faker.instance().internet().emailAddress());
+    }
+
+    @And("kullanici register eposta alanina alfabetik karakter degeri girer")
+    public void kullaniciRegisterEpostaAlaninaAlfabetikKarakterDegeriGirer() {
+        pages.registerPage().emailTextboxRegister.sendKeys(Faker.instance().lorem().characters(3,10));
     }
 }
