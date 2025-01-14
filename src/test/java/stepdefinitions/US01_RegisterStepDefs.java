@@ -18,7 +18,9 @@ public class US01_RegisterStepDefs {
             clickWithJS(pages.homePage().popupHappyNewYear2025ClouseButtonHome);
         }
         else {
-            clickWithJS(pages.homePage().registerButonHome);
+            //clickWithJS(pages.homePage().registerButonHome);
+            actions.moveToElement(pages.homePage().registerButonHome).perform();
+            actions.doubleClick(pages.homePage().registerButonHome).perform();
         }
     }
     @And("kullanici register sayfasina yonlendirildigini dogrular")
