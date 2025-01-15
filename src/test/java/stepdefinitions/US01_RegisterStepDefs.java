@@ -12,6 +12,7 @@ public class US01_RegisterStepDefs {
     AllPages pages=new AllPages();
     Actions actions=new Actions(Driver.getDriver());
     String symbol="++--//^^%*!..$#{[]}&";
+    int randomNumber = Faker.instance().number().numberBetween(1000, 9999);
     @And("kullanici registerHome butona tiklar")
     public void kullaniciRegisterHomeButonaTiklar() {
         if(pages.homePage().popupHappyNewYear2025ClouseButtonHome.isDisplayed()) {
@@ -99,5 +100,10 @@ public class US01_RegisterStepDefs {
     @And("kullanici register eposta alanina alfabetik karakter degeri girer")
     public void kullaniciRegisterEpostaAlaninaAlfabetikKarakterDegeriGirer() {
         pages.registerPage().emailTextboxRegister.sendKeys(Faker.instance().lorem().characters(3,10));
+    }
+
+    @And("kullanici register eposta alanina sayilardan olusan degeri girer")
+    public void kullaniciRegisterEpostaAlaninaSayilardanOlusanDegeriGirer() {
+        pages.registerPage().emailTextboxRegister.sendKeys(""+randomNumber);
     }
 }
