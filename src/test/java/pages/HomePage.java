@@ -25,11 +25,8 @@ public class HomePage {
     @FindBy(xpath = "(//*[.='MERHABA,'])[1]")
     public WebElement kayitliKullaniciMerhabaTextHome;
 
-    @FindBy(xpath = "//a[@id='idrSZ5ktqq']")
+    @FindBy(xpath = "(//*[@href='https://www.bdshop.com/customer/account/create/'])[1]")
     public WebElement registerButonHome;
-
-    //@FindBy(xpath = "//*[@id='idgD1Iwfmd']")
-    //    public WebElement registerButton;
 
     @FindBy(xpath = "//*[@class='customer-name acc-btn']")
     public WebElement hesabimIkonHome;
