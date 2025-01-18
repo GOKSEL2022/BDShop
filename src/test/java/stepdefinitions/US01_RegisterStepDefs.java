@@ -86,8 +86,8 @@ public class US01_RegisterStepDefs {
     public void kullaniciEpostaAlaniniBosBirakarakCreateAnAccountButonaTiklar() {
         //pages.registerPage().epostaTextboxRegister.sendKeys(Keys.SPACE,Keys.SPACE,Keys.SPACE);
         clickWithJS(pages.registerPage().createAnAccountButtonRegister);
-    }@And("kullanici Eposta ve sifre alanlarinda alanlarinda This is a required field uyarisini goruntuler")
-    public void kullaniciEpostaVeSifreAlanlarindaAlanlarindaThisIsARequiredFieldUyarisiniGoruntuler() {
+    }@And("kullanici Eposta ve sifre alaninda This is a required field uyarisini goruntuler")
+    public void kullaniciEpostaVeSifreAlanindaThisIsARequiredFieldUyarisiniGoruntuler() {
         assertFalse(pages.registerPage().thisIsARequiredFieldAlertEmailRegister.isDisplayed());
         assertFalse(pages.registerPage().thisIsARequiredFieldAlertPasswordRegister.isDisplayed());
     }
