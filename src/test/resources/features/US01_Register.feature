@@ -76,7 +76,15 @@ Feature: sayfaya uyelik icin pozitif ve negatif test senaryolari
     And kullanici Eposta ve sifre alaninda This is a required field uyarisini goruntuler
     And kullanici sayfayi kapatir
 
-  @US01_TC007
+  @US01_TC008
+  Scenario: Eposta alanlarina girilen bastaki ve sondaki boslukların kirpilip kirpilmadigini dogrulama testi
+    And kullanici first name alanina valid deger girer
+    And kullanici last name alanina valid deger girer
+    And kullanici register eposta alanina valid deger girer
+    And kullanici valid email ile kirpilmis emailin karakter uzunlugunun esit oldugunu dogrular
+    And kullanici sayfayi kapatir
+
+  @US01_TC008
   Scenario: Gecerli Eposta adresi saglayarak Eposta alanini dogrulama testi
     And kullanici first name alanina valid deger girer
     And kullanici last name alanina valid deger girer
@@ -84,6 +92,8 @@ Feature: sayfaya uyelik icin pozitif ve negatif test senaryolari
     And kullanici create an account butona tiklar
     And kullanici sifre alaninda This is a required field uyarisini goruntuler
     And kullanici sayfayi kapatir
+
+    #E-posta alanlarına girilen baştaki ve sondaki boşlukların kırpılıp kırpılmadığını doğrula
 
 
 
