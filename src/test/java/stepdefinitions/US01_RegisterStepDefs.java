@@ -6,6 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import pages.AllPages;
 import utilies.ConfigReader;
 import utilies.Driver;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static utilies.ReusableMethods.clickWithJS;
 public class US01_RegisterStepDefs {
@@ -105,5 +106,17 @@ public class US01_RegisterStepDefs {
     @And("kullanici register eposta alanina sayilardan olusan degeri girer")
     public void kullaniciRegisterEpostaAlaninaSayilardanOlusanDegeriGirer() {
         pages.registerPage().emailTextboxRegister.sendKeys(""+randomNumber);
+    }
+
+    @And("kullanici register eposta alanina valid deger girer")
+    public void kullaniciRegisterEpostaAlaninaValidDegerGirer() {
+        pages.registerPage().emailTextboxRegister.sendKeys(ConfigReader.getProperty("validMailRegister"));
+    }
+
+    @And("kullanici valid email ile kirpilmis emailin karakter uzunlugunun esit oldugunu dogrular")
+    public void kullaniciValidEmailIleKirpilmisEmailinKarakterUzunlugununEsitOldugunuDogrular() {
+        String registerMail="gokselcelik5255@gmail.com";
+        String registerBosluksuzMail=registerMail.trim();
+        assertEquals(registerBosluksuzMail.trim().length(), registerMail.trim().length());
     }
 }
