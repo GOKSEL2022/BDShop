@@ -93,8 +93,6 @@ Feature: sayfaya uyelik icin pozitif ve negatif test senaryolari
     And kullanici sifre alaninda This is a required field uyarisini goruntuler
     And kullanici sayfayi kapatir
 
-    #E-posta alanlarına girilen baştaki ve sondaki boşlukların kırpılıp kırpılmadığını doğrula
-
 
 
 

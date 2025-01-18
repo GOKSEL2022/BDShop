@@ -117,6 +117,6 @@ public class US01_RegisterStepDefs {
     public void kullaniciValidEmailIleKirpilmisEmailinKarakterUzunlugununEsitOldugunuDogrular() {
         String registerMail="gokselcelik5255@gmail.com";
         String registerBosluksuzMail=registerMail.trim();
-        assertEquals(registerBosluksuzMail.trim().length(), registerMail.trim().length());
+        assertEquals(registerBosluksuzMail.length(), registerMail.length());
     }
 }
