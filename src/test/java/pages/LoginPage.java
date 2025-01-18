@@ -12,8 +12,8 @@ public class LoginPage {
     //@FindBy(xpath = "//*[@id='btn-social-login-authentication']")
     //public WebElement loginButonLogin;
 
-    @FindBy(xpath = "(//a[normalize-space()=' Log In    '])")
-    public WebElement loginButonLogin;
+    @FindBy(xpath = "//a[normalize-space(text())='Log In']")
+    public WebElement loginButtonLogin;
 
 
     @FindBy(xpath = "(//*[.='This is a required field.'])[1]")

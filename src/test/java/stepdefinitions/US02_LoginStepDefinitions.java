@@ -42,7 +42,7 @@ public class US02_LoginStepDefinitions {
     }
     @And("kullanici loginLogin butona tiklar")
     public void kullaniciLoginLoginButonaTiklar() {
-        clickWithJS(pages.loginPage().loginButonLogin);
+        clickWithJS(pages.loginPage().loginButtonLogin);
     }
     @And("kullanici email ve password alanlarinda This is a required field uyarisini goruntuler")
     public void kullaniciEmailVePasswordAlanlarindaThisIsARequiredFieldUyarisiniGoruntuler() {
