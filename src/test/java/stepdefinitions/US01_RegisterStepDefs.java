@@ -119,4 +119,9 @@ public class US01_RegisterStepDefs {
         String registerBosluksuzMail=registerMail.trim();
         assertEquals(registerBosluksuzMail.length(), registerMail.length());
     }
+
+    @And("kullanici sifre alaninda This is a required field uyarisini goruntuler")
+    public void kullaniciSifreAlanindaThisIsARequiredFieldUyarisiniGoruntuler() {
+        assert pages.registerPage().thisIsARequiredFieldAlertPasswordRegister.isDisplayed();
+    }
 }
