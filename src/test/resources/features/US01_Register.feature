@@ -84,13 +84,22 @@ Feature: sayfaya uyelik icin pozitif ve negatif test senaryolari
     And kullanici valid email ile kirpilmis emailin karakter uzunlugunun esit oldugunu dogrular
     And kullanici sayfayi kapatir
 
-  @US01_TC008
+  @US01_TC009
   Scenario: Gecerli Eposta adresi saglayarak Eposta alanini dogrulama testi
     And kullanici first name alanina valid deger girer
     And kullanici last name alanina valid deger girer
     And kullanici register eposta alanina valid deger girer
     And kullanici create an account butona tiklar
     And kullanici sifre alaninda This is a required field uyarisini goruntuler
+    And kullanici sayfayi kapatir
+
+  @US01_TC010
+  Scenario: Kayitli kullanici Epostasi ile register Eposta alanini dogrulama testi
+    And kullanici first name alanina valid deger girer
+    And kullanici last name alanina valid deger girer
+    And kullanici register eposta alanina valid deger girer
+    And kullanici create an account butona tiklar
+    And kullanici Bu Eposta adresiyle zaten bir hesap var uyarisini goruntuler
     And kullanici sayfayi kapatir
 
 
