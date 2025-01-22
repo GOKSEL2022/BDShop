@@ -124,4 +124,8 @@ public class US01_RegisterStepDefs {
     public void kullaniciSifreAlanindaThisIsARequiredFieldUyarisiniGoruntuler() {
         assert pages.registerPage().thisIsARequiredFieldAlertPasswordRegister.isDisplayed();
     }
+
+    @And("kullanici Bu Eposta adresiyle zaten bir hesap var uyarisini goruntuler")
+    public void kullaniciBuEpostaAdresiyleZatenBirHesapVarUyarisiniGoruntuler() {
+    }
 }
